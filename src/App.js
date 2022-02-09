@@ -6,7 +6,6 @@ import {
   NavLink,
   Route,
   Redirect,
-  Link,
 } from 'react-router-dom';
 import AuthPage from './AuthPage';
 import DetailPage from './DetailPage';
@@ -44,17 +43,12 @@ export default function App() {
         <header>
           {
             user && 
-            <ul>
-              <li>
-                <Link to='/board-games'>List</Link>
-              </li>
-              <li>
-                <Link to='/create'>Create</Link>
-              </li>
-              <li>
-                <button onClick={logout}>Logout</button>
-              </li>
-            </ul>
+            <div>
+              <NavLink activeClassName='games' to='/board-games'>List</NavLink>
+              <NavLink activeClassName='edit' to='/create'>Create</NavLink>
+              <button onClick={handleLogout}>Logout</button>
+              
+            </div>
           }
           {/* if there is a user in state, render out a link to the board games list, the create page, and add a button to let the user logout */}
         </header>
