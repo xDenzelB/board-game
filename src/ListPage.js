@@ -18,7 +18,7 @@ export default function ListPage() {
     fetch();
   }, []);
   return (
-    <div className='list games'>
+    <div className='list-games'>
       {
         games.map(game => <Game key={`${game.id}`} game={game} />)
       }

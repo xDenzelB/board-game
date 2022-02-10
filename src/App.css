@@ -40,7 +40,7 @@ a {
 .App main {
   height: 100%;
   width: 80%;
-  margin: 0 auto;
+  margin: 30px;
   background-color: white;
   padding: 50px;
 }
@@ -82,12 +82,31 @@ select {
   align-items: center;
 }
 
-.game {
-
+.list-games {
+  border: solid 5px purple;
+  border-radius: 7px;
+  background-color: rgb(214, 16, 155);
 }
 
 .detail {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
+  border: black 2px solid;
+  background-color: orangered;
+  opacity: 0.8;
 }
 
+.detail:hover {
+  opacity: 1;
+}
+
+.game {
+  border: solid 2px black;
+  background-color: lightblue;
+  opacity: 0.8;
+  margin: 5px;
+}
+
+.game:hover {
+  opacity: 1;
+}
