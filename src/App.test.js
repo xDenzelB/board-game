@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Create from './CreatePage';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+test('Add board game', async () => {
+  render(<Create />);
+  const linkElement = await screen.findByText(/Add board game/i);
   expect(linkElement).toBeInTheDocument();
 });
